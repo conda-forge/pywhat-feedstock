@@ -1,5 +1,5 @@
 {% set name = "pywhat" %}
-{% set version = "3.2.0" %}
+{% set version = "3.3.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pywhat-{{ version }}.tar.gz
-  sha256: 48d15667949976e1f385dc1d96ce71e34c55997d51d45189f7770811f7ac11d1
+  sha256: f62e16ae0f0a6cd1abbbe2ba56f28946e3b83a5ceec6ad6f0f1358540a00740d
 
 build:
   number: 0
@@ -25,7 +25,6 @@ requirements:
     - python >=3.6,<4.0
   run:
     - click >=7.1.2,<8.0.0
-    - langdetect >=1.0.8,<2.0.0
     - name_that_hash >=1.7.0,<2.0.0
     - python >=3.6,<4.0
     - rich >=9.9,<11.0
