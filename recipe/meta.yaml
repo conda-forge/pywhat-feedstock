@@ -25,7 +25,7 @@ requirements:
     - python >=3.6,<4.0
   run:
     - click >=7.1.2,<8.0.0
-    - name_that_hash >=1.7.0,<2.0.0
+    - orjson >=3.6.1
     - python >=3.6,<4.0
     - rich >=9.9,<11.0
 
