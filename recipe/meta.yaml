@@ -16,7 +16,10 @@ build:
   entry_points:
     - pywhat = pywhat.what:main
     - what = pywhat.what:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    # Removing pyproject.toml here due to pip bug
+    - {{ PYTHON }} -c "__import__('os').unlink('pyproject.toml')"
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
