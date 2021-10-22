@@ -1,5 +1,5 @@
 {% set name = "pywhat" %}
-{% set version = "4.3.1" %}
+{% set version = "5.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pywhat-{{ version }}.tar.gz
-  sha256: efdf5d0216185c8349eea8d52c6b987ef8b873a6d48cd55d816931bad6d09373
+  sha256: 03a47951ee0bc50c2d55fafd6693a54c4dd1f8dce834ea6587b0305ec3d3059e
 
 build:
   number: 0
