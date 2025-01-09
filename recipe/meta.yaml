@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pywhat-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pywhat-{{ version }}.tar.gz
   sha256: 8a6f2b3060f5ce9808802b9ca3eaf91e19c932e4eaa03a4c2e5255d0baad85c4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pywhat = pywhat.what:main
@@ -25,11 +25,11 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.6,<4.0
+    - python {{ python_min }}
   run:
     - click >=7.1.2,<8.0.0
     - orjson >=3.6.1
-    - python >=3.6,<4.0
+    - python >={{ python_min }},<4.0
     - rich >=9.9,<11.0
 
 test:
@@ -41,6 +41,7 @@ test:
     - what --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bee-san/pyWhat
